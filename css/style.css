@@ -1,0 +1,498 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  /* padding: 10px 20px; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+  min-width: 1000px;
+}
+
+.body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  border: 5px solid black;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  overflow: hidden;
+}
+
+.addMoney span {
+  padding: 10px 20px;
+  background-color: #d5d5d5;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px grey;
+  color: #000;
+  font-weight: 600;
+}
+
+.addMoney span:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: translateX(-3px);
+}
+
+.nameGame>h1 {
+  color: green;
+  text-shadow: 10px 10px 6px green;
+  transform: skewX(20deg);
+  letter-spacing: 15px;
+  border-bottom: 1px ridge pink;
+  padding-bottom: 7px;
+}
+
+.box-info {
+  width: 22%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.myMoney {
+  text-align: center;
+  padding: 10px;
+  color: red;
+  font-weight: 600;
+  width: 120px;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  box-shadow: 0 0 6px gray;
+}
+
+.textItemHistory {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.historyPlay>span:hover {
+  cursor: pointer;
+  color: red;
+  transform: translateY(-3px);
+}
+
+.main {
+  position: relative;
+  display: flex;
+  padding: 15px 30px;
+}
+
+.mainLeft {
+  flex: 1.5;
+}
+
+.listPhoto {
+  width: 90%;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.itemPhoto {
+  position: relative;
+  flex-basis: 32%;
+  padding: 10px;
+  /* border: 1px solid ; */
+  border-radius: 10px;
+  box-shadow: -3px -3px 6px grey, 3px 3px 6px rgb(49, 49, 49);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+/* .itemPhoto:hover {
+  background-color: rgba(0, 0, 0, 0.324);
+} */
+
+.itemPhoto:hover>img {
+  /* opacity: 0.8; */
+  transform: scale(0.988);
+}
+
+.itemPhoto:hover>span {
+  cursor: pointer;
+  transform: scale(1.2);
+  font-weight: 600;
+}
+
+.itemPhoto>span {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 5px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 6px red;
+  background-color: #fff;
+  transition: all 0.2s linear;
+}
+
+.itemPhoto>img {
+  width: 100%;
+  transition: all 0.3s linear;
+}
+
+.mainRight {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.lvMoney {
+  width: 80%;
+  margin: auto;
+}
+
+.lvMoney>div select {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid red;
+  border-radius: 10px;
+}
+
+.sumMoney {
+  display: flex;
+  padding: 5px;
+}
+
+.sumMoney>span {
+  width: 200px;
+  margin: auto;
+  color: rgb(21, 95, 186);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.keyPlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+}
+
+.keyPlay .btn-start {
+  display: inline-block;
+  padding: 30px;
+  margin: auto;
+  outline: 0;
+  background-image: linear-gradient(132deg, rgb(34, 0, 255), rgb(255, 0, 0), rgb(0, 204, 255));
+  border-radius: 50%;
+  border: 0;
+  box-shadow: inset 0 0 10px red;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+.btn-start:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px grey;
+  opacity: 0.9;
+  transform: scale(1.1);
+  color: black;
+}
+
+.resultGame {
+  display: inline-block;
+  margin: 30px 0;
+  cursor: pointer;
+}
+
+.resultGame>ul {
+  display: flex;
+  box-shadow: 0 0 10px grey;
+  padding: 15px;
+  margin-left: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.resultGame>ul>li {
+  flex-basis: 33%;
+  padding: 5px;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+
+.resultGame>ul>li>img {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.353);
+  transition: all 0.5s linear;
+}
+
+.addMoney .box-addMoney {
+  display: none;
+}
+
+.box-add {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: #d5d5d587;
+}
+
+.box-add>form {
+  position: relative;
+  width: 30%;
+  box-shadow: 0 0 10px black;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  transform: scale(0.5);
+  transition: all 0.3s linear;
+  animation: scaleForm 0.3s linear alternate forwards;
+}
+
+@keyframes scaleForm {
+  to {
+    transform: scale(1);
+  }
+}
+
+.box-add>form div:first-child {
+  text-align: center;
+}
+
+.box-add>form div:first-child i {
+  position: absolute;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 18px;
+  color: rgb(79, 79, 79);
+  transition: all 0.2s linear;
+}
+
+.box-add>form div:first-child i:hover {
+  background-color: #d5d5d5;
+  color: black;
+  transform: scale(1.2);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.box-add>form div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  text-align: left;
+}
+
+.box-add>form div>input, .box-add>form div>select {
+  padding: 6px;
+  margin: 3px 0;
+  outline: 0;
+  border: 0;
+  box-shadow: inset 0 0 6px grey;
+  border-radius: 5px;
+}
+
+.box-add>form div>button {
+  padding: 5px;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: rgb(0, 128, 117);
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.box-add>form div>button:hover {
+  color: red;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.box-History {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -50%;
+  left: 0px;
+  z-index: 100;
+  transition: all 0.5s linear;
+  animation: onlyright 0.5s linear forwards;
+  display: none;
+}
+
+@keyframes onlyright {
+  to {
+    right: 0;
+    background-color: #d5d5d587;
+  }
+}
+
+.list-history {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #fff;
+  color: #000;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px 0 0 20px;
+}
+
+.list-history>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.229);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 2px 2px 10px grey;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+}
+
+.list-history>div>i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #616165;
+  transition: all 0.2s linear;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.list-history>div>i:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.list-history>li {
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px 10px;
+  display: inline-block;
+}
+
+.list-history>li>b {
+  color: red;
+}
+
+.formError {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* background-color: rgba(79, 79, 79, 0.026); */
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: all 0.4s linear;
+  transform: translate(-400px);
+  animation: onlyformError 0.4s linear forwards;
+}
+
+@keyframes onlyformError {
+  to {
+    transform: translate(0);
+  }
+}
+
+.formError>div {
+  position: relative;
+  top: 15px;
+  width: 400px;
+  border: 1px solid red;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.formError>div span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 100px;
+  background-color: #d5d5d5;
+  color: #000;
+  font-weight: 600;
+}
+
+.formError>div h2 {
+  color: red;
+}
+
+.formError>div p {
+  padding: 10px 0;
+}
+
+#formGift {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  width: 200px;
+  height: 50px;
+  z-index: 200;
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  transform-origin: 50% 50%;
+  opacity: 0;
+  animation: onlyFormGift 1s cubic-bezier(0.075, 0.12, 0.12, 1) reverse forwards;
+  display: none;
+}
+
+@keyframes onlyFormGift {
+  to {
+    transform-origin: 50% 50%;
+    transform: scale(3);
+    opacity: 1;
+  }
+}

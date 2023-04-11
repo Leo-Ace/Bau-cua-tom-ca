@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <title>Bầu Cua Tôm Cá / LeoAce..</title>
+  <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <section class="body">
+    <div class="header">
+      <div class="addMoney">
+        <span class="textItemMney" onclick="exitFormClick('.textItemMney', '.box-addMoney', '.exitFormAdd', '.box-add>form')">Nạp Tiền</span>
+        <div class="box-addMoney">
+          <div class="box-add">
+            <form action="#" class="formAddMoney">
+              <div>
+                <h2>Nạp tiền</h2>
+                <i class="fa-solid fa-xmark exitFormAdd"></i>
+              </div>
+              <div>
+                <label for="cardType">Loại thẻ</label>
+                <select name="cardType" id="cardType">
+                  <option value="Viettel">Viettel</option>
+                  <option value="Mobiphone">Mobiphone</option>
+                  <option value="Vinaphone">Vinaphone</option>
+                  <option value="Gate">Gate</option>
+                  <option value="BIT">BIT</option>
+                  <option value="ZING">ZING</option>
+                </select>
+              </div>
+              <div>
+                <label for="IdCard">Mã thẻ</label>
+                <input type="text" name="IdCard" id="IdCard">
+              </div>
+              <div>
+                <label for="Seri">Số Seri</label>
+                <input type="text" name="Seri" id="Seri">
+              </div>
+              <div>
+                <label for="prices">Mệnh giá</label>
+                <select name="prices" id="prices">
+                  <option value="0" disabled selected>Mệnh giá thẻ cào</option>
+                  <option value="10000">10.000</option>
+                  <option value="20000">20.000</option>
+                  <option value="50000">50.000</option>
+                  <option value="100000">100.000</option>
+                  <option value="200000">200.000</option>
+                </select>
+              </div>
+              <div>
+                <button type="button" class="btn-loadCard">Nạp</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="nameGame">
+        <h1>Bầu Cua Tôm Cá</h1>
+      </div>
+      <div class="box-info">
+        <div class="myMoney">
+          <span id="myMoney">0</span>
+          <span>$</span>
+        </div>
+        <div class="historyPlay">
+          <span class="textItemHistory" onclick="exitFormClick('.textItemHistory', '.box-History', '.exitFormHistory', '.list-history')">Lịch sử chơi</span>
+          <div class="box-History">
+            <ul class="list-history">
+              <div>
+                <h2>Lịch Sử Chơi</h2>
+                <i class="fa-solid fa-xmark exitFormHistory"></i>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="formError">
+        <div>
+          <span></span>
+          <h2>Thông báo</h2>
+          <p>Nghèo thì không nên chơi nhé! (Không đủ tiền!)</p>
+        </div>
+      </div>
+      <div id="formGift">
+        <span></span>
+      </div>
+    </div>
+    <div class="main">
+      <div class="mainLeft">
+        <h2>Chọn:</h2>
+        <div class="listPhoto">
+          <div class="listItem">
+            <div class="itemPhoto">
+              <img src="./img/nai.png" alt="image">
+              <span>+0</span>
+            </div>
+            <div class="itemPhoto">
+              <img src="./img/bau.png" alt="image">
+              <span>+0</span>
+            </div>
+            <div class="itemPhoto">
+              <img src="./img/ga.png" alt="image">
+              <span>+0</span>
+            </div>
+          </div>
+          <div class="listItem">
+            <div class="itemPhoto">
+              <img src="./img/ca.png" alt="image">
+              <span>+0</span>
+            </div>
+            <div class="itemPhoto">
+              <img src="./img/cua.png" alt="image">
+              <span>+0</span>
+            </div>
+            <div class="itemPhoto">
+              <img src="./img/tom.png" alt="image">
+              <span>+0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mainRight">
+        <div class="lvMoney">
+          <div>
+            <label for="lvMoney">
+              <h3>Mức tiền / lần chọn :</h3>
+            </label>
+            <select name="listLv" id="lvMoney">
+              <option value="0" disabled selected>Money</option>
+              <option value="5000">5.000 VND</option>
+              <option value="10000">10.000 VND</option>
+              <option value="20000">20.000 VND</option>
+              <option value="25000">25.000 VND</option>
+              <option value="50000">50.000 VND</option>
+              <option value="100000">100.000 VND</option>
+            </select>
+          </div>
+          <div class="sumMoney">
+            <h4>Tổng tiền đặt cược:</h4>
+            <span>0 VND</span>
+          </div>
+        </div>
+        <div class="keyPlay">
+          <button class="btn-start">RUN</button>
+        </div>
+        <div class="resultGame">
+          <ul id="listResult">
+            <li>
+              <img src="./img/diaup.png" alt="image">
+            </li>
+            <li>
+              <img src="./img/diaup.png" alt="image">
+            </li>
+            <li>
+              <img src="./img/diaup.png" alt="image">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
